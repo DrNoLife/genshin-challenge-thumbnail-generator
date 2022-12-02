@@ -96,6 +96,8 @@ body {
 
 .middle-section {
     flex: 1;
+    color: #fff;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .antagonists {
