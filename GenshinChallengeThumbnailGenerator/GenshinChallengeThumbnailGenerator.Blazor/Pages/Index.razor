@@ -1,0 +1,82 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<div class="settings-container">
+
+    <div class="input-container">
+        <label>Challenge Title</label>
+        <input type="text" placeholder="Title" @bind="Title" />
+    </div>
+
+    <div class="input-container">
+        <label>Background Image</label>
+        <InputFile OnChange="@LoadFiles" multiple />
+    </div>
+
+    <div class="input-container">
+        <label>Select Monsters</label>
+        <div class="mass-checkbox-container">
+
+            @if(Monsters is null) 
+            {
+                <p>Loading monsters...</p>
+            }
+            else if(Monsters.Count == 0)
+            {
+                <p>Found no monsters.</p>
+            }
+            else
+            {
+                @foreach(var monster in Monsters)
+                {
+                    <div class="checkbox-container">
+                        <label for="@monster.Id">@monster.Name</label>
+                        <input id="@monster.Id" type="checkbox" @bind="monster.IsSelected"/>
+                    </div>
+                }
+            }
+
+        </div>
+    </div>
+
+    
+
+</div>
+
+<div class="wrapper" style="background: url('data:image /png;base64, @BackgroundImageBase64') no-repeat center center; background-size: cover;">
+    <section class="protagonists blur-behind">
+        <div class="text-container">
+            <p>@(Title)</p>
+        </div>
+    </section>
+
+    <section class="middle-section">
+        <div class="text-container">
+            <p>vs.</p>
+        </div>
+    </section>
+
+    <section class="antagonists blur-behind">
+
+        @if(Monsters is null)
+        {
+            <p>No enemies loaded.</p>
+        }
+        else if(Monsters.Count == 0)
+        {
+
+        } 
+        else
+        {
+            @foreach(var monster in Monsters.Where(x => x.IsSelected))
+            {
+                <div class="antagonist">
+                    <div style="background: url('@monster.ImageUrl') no-repeat center center; background-size: cover;">
+
+                    </div>
+                </div>
+            }
+        }
+    </section>
+</div>

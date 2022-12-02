@@ -1,0 +1,141 @@
+﻿.settings-container {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 100;
+    padding: 50px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 1000px;
+}
+
+.mass-checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.checkbox-container {
+    max-width: 250px;
+    min-width: 250px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.settings-container .input-container > label {
+    font-weight: bold;
+    font-size: 20px;
+}
+.settings-container input:not([type="checkbox"]) {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+
+
+
+
+body {
+    background-color: #222222;
+    color: #fff;
+    font-family: 'Anek Devanagari', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.blur-behind {
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+}
+
+.wrapper {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.text-container {
+    font-size: 200px;
+    text-align: center;
+}
+
+.protagonists {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .protagonists .text-container {
+        padding: 20px;
+        font-family: 'Playfair Display', serif;
+        background: #FFFFFF;
+        background: repeating-linear-gradient(to top, #FFFFFF 0%, #bbd9eb 90%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 400;
+    }
+
+.middle-section {
+    flex: 1;
+}
+
+.antagonists {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    .antagonists .antagonist {
+        height: 256px;
+        width: 256px;
+        background-color: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .antagonists .antagonist div {
+        height: 100%;
+        width: 100%;
+    }
+
+        /*.antagonists .antagonist:nth-child(1) {
+            background: url("images/enemies/anemo_hypostasis.png") no-repeat center center;
+            background-size: cover;
+        }
+
+        .antagonists .antagonist:nth-child(2) {
+            background: url("images/enemies/ruin_serpent.png") no-repeat center center;
+            background-size: cover;
+        }
+
+        .antagonists .antagonist:nth-child(3) {
+            background: url("images/enemies/golden_wolflord.png") no-repeat center center;
+            background-size: cover;
+        }
+
+        .antagonists .antagonist:nth-child(4) {
+            background: url("images/enemies/azhdaha.png") no-repeat center center;
+            background-size: cover;
+        }*/
+
